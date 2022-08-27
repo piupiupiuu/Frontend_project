@@ -1,0 +1,976 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: linear-gradient(to top,rgb(33,51,77),rgb(14, 23, 36))!important;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar{
+    color: transparent;
+    width: 10px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: grey;
+    
+}
+
+.off {
+    display: none !important;
+}
+
+/* login page */
+#login-page {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(15,23,36);
+    opacity: 0.8;
+    border-radius: 8px;
+    width: 380px;
+    padding:20px 0px;
+    margin:auto;
+}
+
+#login-page .header {
+    position: absolute;
+    top:5px;
+    left:30px;
+    font-size:24px;
+    font-weight: bold;
+    width:200px;
+    text-align: center; 
+    border-radius: 8px;
+    color:white;
+    padding:3px 0;
+}
+
+#login-page h1{
+    color:white;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family:'Times New Roman';
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#login-page div {
+    margin: 20px 0px;
+    width: 100%;
+    font-size: 5px;
+}
+
+#login-page input {
+    height:30px;
+    width: 100%;
+    color:white;
+    background: transparent !important;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #cfd8dc;
+    padding-left: 10px;
+}
+
+#login-page .notice {
+    color: red;
+    display: none;
+}
+
+.sign-in button {
+    width: 100%;
+    height:30px;
+    border:1px;
+    font-size: 16px;
+    background-color:#aca7a9;
+    color: white;
+    border-radius: 20px !important;
+    position: relative;
+}
+
+.sign-in button:hover {
+    background-color: #534e4e;
+}
+
+.sign-in button:active {
+    top:2px;
+}
+
+.swap-to-sign-in-or-up {
+    text-align: right;
+}
+
+.swap-to-sign-in-or-up button{
+    border: none ;
+    background-color: transparent;
+    cursor: pointer;
+    color:#BCDFFA;
+    font-size:14px;
+}
+
+.swap-to-sign-in-or-up button:hover {
+    background-color: #aca7a9;
+    color: white;
+    border-radius: 8px;
+}
+
+.swap-to-sign-in-or-up span {
+    font-size:13px;
+    color: darkgray;
+}
+
+/* footer and header */
+footer {
+    width:100%;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:5px  20px;
+}
+
+header nav {
+    display: flex;
+    width: 100%;
+    gap:20px;
+    list-style: none;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left:1%;
+}
+
+header nav li {
+    position: relative;
+    text-align: center;
+    font-size:10px;
+    width:80px;
+    padding-top:3px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+#homepage {
+    left:5px;
+}
+
+#homepage img{
+    height:18px;
+    width: 18px;
+}
+
+#personal-profile img{
+    height: 18px;
+    width: 18px;
+}
+
+header nav li:hover {
+    background-color: #d4cbcb;
+    color: #3887c4;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+header nav li:active {
+    top:2px;
+}
+
+header nav input {
+    width:100%;
+    border: 1px;
+    border-radius: 3px;
+    margin-top:5px;
+    color: #292626;
+    background-color: #d4cbcb;
+    background-image: url('img_194915.png');
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    padding-right: 73px;
+    padding-left:10px;
+}
+
+header nav input:focus {
+    outline: none; 
+}
+
+
+header nav .search_bar {
+    width: 60%;
+    line-height: 24px;
+    border: none;
+}
+
+header nav .search_bar button {
+    position: absolute;
+    background: none; 
+    top:8px;
+    right: 25px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    color:#3887c4;
+}
+
+header nav .search_bar button:active {
+    color:#0d4b7a;
+}
+
+header h1{
+    font-size:20px;
+    font-weight: bold;
+    width:200px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 8px;
+    color:white;
+    padding-top:1px;
+    margin:auto 0px;
+    height: 30px;
+}
+
+/* main page */
+main {
+    height: 87%;
+    display: flex;
+}
+
+#main-page {
+    display: flex;
+    width: 100%;
+    padding:0 2%;
+    justify-content: center;
+    gap:1%;
+}
+
+#main-left {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    gap:5%;    
+}
+
+#feed-page {
+    width:85%;
+    margin-top: 1.2%;
+    border-radius: 0px;
+    border-left: 2px double #534e4e;
+    padding:0 2%;
+}
+
+#post-job{
+    width:100%;
+    border-bottom:  #292626 2px solid;
+    text-align: center;
+    padding: 7% 0;
+}
+
+#post-job button {
+    width: 75%;
+    padding: 7px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color:#534e4e;
+    border:none;
+    color: white;
+    position: relative;
+    background-image: url('post.png');
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: left 6% center;
+}
+
+#post-job button:hover {
+    background-color: #aca7a9;
+}
+
+#post-job button:active {
+    top:2px;
+}
+
+#personal-information{
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 14px;
+    padding-bottom: 30px;
+    position: relative;
+    border: 2px solid #534e4e;
+}
+
+#job-information{
+    height: 100%;
+    text-align: center;
+    padding-top:1.5%;
+    overflow: auto;
+}
+
+#job-information h1{
+    font-size: 20px;
+    color: #3887c4;
+}
+
+.single-job {
+    border: 1px solid #3887c4;    
+    border-radius: 8px;
+    padding:10px;
+    text-align: left;
+    margin:2% 0;
+    background-color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    position: relative;
+}
+
+.job_content {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.job_content img{
+    width: 30%;
+}
+
+.creator_img {
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+}
+
+.creator_img img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.creator_information {
+    display: flex;
+}
+
+
+.creator_information .creator_name_id_time {
+    font-size: 6px;
+    padding-left :5px;
+}
+
+
+
+.creator_information .creator_name_id_time .creator_name {
+    font-weight: bold;
+}
+
+.creator_information .creator_name_id_time .created_time {
+    color: green;
+}
+
+.job_title {
+    font-weight: bold;
+    margin:10px 0;
+    font-size: 22px;
+}
+
+.job_start {
+    margin: 10px 0;
+    padding-left: 24px;
+    background-image: url('R\ \(1\).png');
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: left 0px center;
+}
+
+.job_description {
+    padding-left:24px;
+    background-image: url("job_description.png");
+    background-repeat: no-repeat;
+    background-size:20px;
+    background-position: left 0px;
+}
+
+.likes_and_comments {
+    display: flex;
+    gap:10px;
+}
+
+.likes_and_comments div:hover {
+    cursor: pointer;
+    color: #3887c4;
+    text-decoration: underline;
+}
+
+.like_and_comment_button {
+    display: flex;
+    gap: 5px;
+    margin:10px 0;
+    border-top:1px solid #cfd8dc;
+    padding-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.like_and_comment_button button{
+    position: relative;
+}
+
+.like_button {
+    padding:8px 34px;
+    padding-right:18px;
+    border-radius: 12px;
+    background-image: url('like.png');
+    background-repeat: no-repeat;
+    background-size:16px;
+    background-position: left 12px center;
+    border: none;
+}
+
+.comment_button {
+    padding: 8px 40px;
+    padding-right:26px;
+    border-radius: 12px;
+    background-image: url('comment.png');
+    background-repeat: no-repeat;
+    background-size:20px;
+    background-position: left 13px center;
+    border: none;
+}
+
+.like_and_comment_button button:hover{
+    background-color: #BCDFFA !important;
+}
+
+.like_and_comment_button button:active {
+    top:2px;
+}
+
+.comment_input {
+    width: 100%;
+    border-radius: 15px;
+    padding:6px 9px;
+    padding-right: 50px;
+}
+
+.leave_comment {
+    position: relative;
+}
+
+.comment_submit {
+    position: absolute;
+    top:7px;
+    right: 8px;
+    border: none;
+    background: none;
+    color:#3887c4;
+}
+
+.comment_submit:active {
+    color:#0d4b7a;
+}
+
+.single_like {
+    display: flex;
+    font-size: 6px;
+    margin: 2% 0;
+    padding:10px 4px;
+    background-image: url("show_like.png");
+    background-repeat: no-repeat;
+    background-size:24px;
+    background-position: right 13px center;
+}
+
+.single_like:hover {
+    background-color: rgb(239,239,239);
+    border-left: 2px #3887c4 solid;
+}
+
+.like_img { 
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+}
+
+.like_img img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.like_information {
+    padding-left: 8px;
+}
+
+.like_name {
+    font-weight: bold;
+}
+
+.like_divider {
+    height: 1px;
+    background-color: #cfd8dc;
+    margin: 0 8px;
+}
+
+.single_comment .commentor{
+    display: flex;
+}
+
+.comment_img {
+    width: 50px;
+    height: 50px;
+    margin:auto 0;
+}
+
+.comment_img img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.comment_information {
+    padding-left:8px;
+}
+
+.comment_name {
+    font-weight: bold;
+}
+
+.comment_divider {
+    height: 1px;
+    background-color: #cfd8dc;
+    margin: 0 8px;
+}
+
+.single_comment {
+    font-size: 6px;
+    margin: 2% 0;
+    padding:10px 4px;
+}
+
+.single_comment:hover {
+    background-color: rgb(239,239,239);
+    border-left: 2px #3887c4 solid;
+}
+
+.comment_text {
+    margin-top:10px;
+    background-color: #e0dbdb;
+    opacity: 0.8;
+    border-radius: 4px;
+    padding:6px 6px;
+    padding-left:30px;
+    background-image: url('comment.png');
+    background-repeat: no-repeat;
+    background-size:16px;
+    background-position: left 8px top 7px;
+    overflow: auto;
+}
+
+.name_button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #3887c4 !important;
+}
+
+#post-job-page .notice {
+    color:red;
+    display: none;
+}
+
+#personal-information div {
+    margin: 4px 0;
+    color: white;
+}
+
+.profile_img img {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile_name {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.profile_id {
+    font-size: 12px;
+}
+
+.profile_email {
+    font-size: 14px;
+    color: #3887c4 !important;
+}
+
+.profile_email:hover {
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+.profile_stat {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin:10px 0 !important;
+}
+
+.profile_stat div {
+    position: relative;
+    width: 70px;
+    border-bottom: 2px;
+}
+
+.profile_stat div:hover {
+    cursor: pointer;
+    border-bottom: solid #534e4e;
+}
+
+.profile_stat div:active {
+    top:2px;
+}
+
+.watch_button {
+    padding: 4px 50px;
+    background-color: #534e4e;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.watch_button:hover {
+    background-color: #aca7a9;
+}
+
+.watch_button:active {
+    top:2px;
+}
+
+.single_watchee {
+    display: flex;
+    font-size: 6px;
+    margin: 2% 0;
+    padding:10px 4px;
+}
+
+.single_watchee:hover {
+    background-color: rgb(239,239,239);
+    border-left: 2px #3887c4 solid;
+}
+
+.watchee_img { 
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+}
+
+.watchee_img img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.watchee_information {
+    padding-left: 8px;
+}
+
+.watchee_name {
+    font-weight: bold;
+}
+
+.watchee_divider {
+    height: 1px;
+    background-color: #cfd8dc;
+    margin: 0 8px;
+}
+
+.edit_delete {
+    position: absolute;
+    top:4%;
+    display: flex;
+    flex-direction: column;
+    right:3%;
+    gap:8px;
+}
+
+.edit_delete button {
+    background: none;
+    border: none;
+    margin: 0px;
+}
+
+.edit_delete button:hover {
+    background-color: #aca7a9;
+    border-radius: 50%;
+}
+
+.edit_button img {
+    height: 21px;
+    width: 21px;
+    margin: 8px 0;
+}
+
+.delete_button img {
+    height: 28px;
+    width: 28px;
+    margin:4px 0;
+}
+
+.update_profile {
+    position: absolute;
+    top:95px;
+    flex-direction: column;
+    right: 20px;
+    border: none;
+    border-radius: 50%;
+}
+
+.update_profile:hover {
+    background-color: #c9c6c6;
+    border-radius: 50%;
+}
+
+.update_profile img {
+    width: 18px;
+    height: 18px;
+    margin:6px 0;
+}
+
+#update-job-page, #post-job-page, #update-personal-page{
+    background: rgb(15,23,36);
+    width: 380px;
+    margin:auto;
+    color:white;
+    padding:20px 35px;
+    border-radius: 8px;    
+}
+
+#update-job-page h1, #post-job-page h1, #update-personal-page h1{
+   font-size:28px;
+}
+
+#update-job-page div, #post-job-page div, #update-personal-page div {
+    margin: 20px 0px;
+    width: 100%;
+    font-size: 5px; 
+}
+
+#update-job-page .personal_img input, #post-job-page .personal_img input, #update-personal-page .personal_img input {
+    border:none;
+}
+
+#post-job-page .job-img input {
+    border: none;
+}
+
+#update-job-page .job-img input {
+    border: none;
+}
+
+#update-job-page input, #post-job-page input, #update-personal-page input {
+    height:30px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #cfd8dc;
+    padding-left: 10px;
+}
+
+#update-job-page textarea, #post-job-page textarea, #update-personal-page textarea {
+    padding-left: 10px;
+}
+
+#update-job-page button, #post-job-page button, #update-personal-page button{
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    background-color:#534e4e;
+    color: white;
+    border: none;
+    position: relative;
+}
+
+#update-job-page button:hover, #post-job-page button:hover, #update-personal-page button:hover {
+    background-color: #aca7a9;
+}
+
+#update-job-page:active, #post-job-page:active, #update-personal-page button:active {
+    top:2px;
+}
+
+#update-personal-page .personal_img {
+    margin:15px  auto 0;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+#update-personal-page .personal_img:hover {  
+    background-image: url('upload.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#update-personal-page .personal_img .upload_img {
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#update-personal-page .personal_img input {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+#update-personal-page .upload_img:hover {
+    opacity: 0.4;
+}
+
+#update-personal-page .personal_img input:hover {
+    cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-calendar-picker-indicator:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    ::-webkit-scrollbar{
+        width: 6px;
+    }
+
+    .like_and_comment_button button {
+        flex:1
+    }
+
+    header h1{
+        display: none;
+    }
+
+    #main-page {  
+        flex-direction: column;
+        justify-content: start;
+        height: 100%;
+        gap: 0; 
+    }
+
+    #feed-page {
+        overflow: auto;
+        width: 100%;
+        border-left: none;
+    }
+
+    #job-information {
+        padding-top: 10px;
+    }
+
+    .single-job {
+        margin-top: 0;
+    }
+
+    #main-left {
+        flex-direction: row;
+        width: 100%;
+        border-bottom: 1px solid #534e4e;
+        gap:10px;
+        justify-content: center;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    
+    #post-job {
+        width: 220px;
+        padding: 0;
+        margin: auto 0;
+        border: none;
+    }
+
+    #post-job button {
+        width: 100%;
+        font-size: 13px ;
+        background-size: 10px;
+    }
+
+    #personal-information {
+        width: 400px;
+        height: 220px;
+        padding-top: 5px;
+        margin-right: 20%;
+    }
+
+    #personal-information img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .profile_name {
+        font-size: 13px !important;
+        font-weight: bold;
+    }
+    
+    .profile_id {
+        color: grey;
+    }
+    
+    .profile_email {
+        font-size: 12px;
+        color: #3887c4;
+    }
+    
+    
+    .profile_stat {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+        margin:4px 0 !important;
+    }
+    
+    
+    .profile_stat div {
+        position: relative;
+        width: 70px;
+        border-bottom: 2px;
+    }
+    
+    .watch_button {
+        padding: 3px 25px;
+        font-size: 13px;
+    }
+
+    .update_profile {
+        top: 80px !important;
+        right:10% !important;
+    }
+
+    .update_profile img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+}
+

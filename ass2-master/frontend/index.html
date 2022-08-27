@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LurkForWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/global.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+</head>
+<body>
+    <!-- This is an example app structure, you can modify this as much as you choose --> 
+    
+    <header class="off">
+        <h1>lurkforwork.com</h1>
+        <nav>
+            <li id="homepage">
+                <div class="img"><img src="styles/R-C.png"></div>
+                <div>Home</div>
+            </li>
+            <li class="nav-item search_bar">
+                <input type="text" placeholder="Watch by E-mail">
+                <button type="button" class="off">Watch</button>
+            </li>
+            <li id="personal-profile">
+                <div class="img"><img id='profile-img' src="styles/img_210318.png"></div>
+                <div>Me</div>
+            </li>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- app goes here --> 
+        <!--login page-->
+        <div id="login-page" class="page on">
+            <div class="header">lurkforwork.com</div>
+            <form id="login-form" class="on">
+                <h1>Lurkforwork</h1>
+                <div class="email">
+                    <input type="text" placeholder="E-mail" name="email"><br>
+                    <span class="notice" >Please enter your email address.</span>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password" name="password"><br>
+                    <span class="notice">Please enter your password.</span>
+                </div>
+                <div class="sign-in">
+                    <button type="button" id="login-btn">Login</button>
+                </div>
+                <div class="swap-to-sign-in-or-up">
+                    <span>Don't have an account?</span> 
+                    <button type="button" id="swap-to-sign-up-btn">Join now</button>
+                </div>
+            </form>
+
+            <form id="sign-up-form" class="off">
+                <h1>Lurkforwork</h1>
+                <div class="email">
+                    <input type="text" placeholder="E-mail" name="email"><br>
+                    <span class="notice">Please enter your email.</span>
+                </div>
+                <div class="username">
+                    <input type="text" placeholder="Name" name="username"><br>
+                    <span class="notice">Please enter your name.</span>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password" name="password"><br>
+                    <span class="notice" >Please enter your password.</span>
+                </div>
+                <div class="confirmpassword">
+                    <input type="password" placeholder="Confirm password" name="confirmpassword"><br>
+                    <span class="notice">Please enter your password again.</span>
+                </div>
+                <div class="sign-in">
+                    <button type="button" id="sign-up-btn">Sign up</button>
+                </div>
+                <div class="swap-to-sign-in-or-up">
+                    <span>Already have an account?</span> 
+                    <button type="button" id="swap-to-sign-in-btn">Sign in</button>
+                </div>
+            </form>
+        </div>
+
+        <!--main page-->
+        <div id="main-page" class="page off">
+            <div id="main-left">
+                <div id="post-job">
+                    <button type="button">Post a job</button>
+                </div>
+                <div id="personal-information">
+                   
+                </div>
+            </div>
+            
+            <div id='feed-page'>
+                <div id="job-information"></div>
+            </div>
+        </div>
+
+        <!--post job page-->
+        <div id="post-job-page" class="page off">
+            <form id="new-job">
+                <h1>Post a new job</h1>
+                <div class="job-title">
+                    <span>Job title:</span>
+                    <input type="text" name="job_title">
+                    <span class="notice">Please provide a job title.</span>
+                </div>
+                <div class="job-img">
+                    <span>Job content image:</span>
+                    <input type="file" name="job_img" accept=".jpeg,.png,.jpg">
+                    <span class="notice">Please upload your job content.</span>
+                </div>
+                <div class="job-start">
+                    <span>Job starts on:</span>
+                    <input type="datetime-local" name="job_start">
+                    <span class="notice">Please provide a starting date.</span>
+                </div>
+                <div class="job-description">
+                    <span>Job description:</span><br>
+                    <textarea rows="6" cols="47" name="job_description"></textarea>
+                    <span class="notice">Please provide a job description</span>
+                </div>
+                <div class="post">
+                    <button type="button">Post</button>
+                </div>
+            </form>
+        </div>
+    
+        <!--Update job page-->
+        <div id="update-job-page" class="page off">
+            <form id="update-job">
+                <h1>Update your job post</h1>
+                <div class="job-title">
+                    <span>Job title:</span>
+                    <input type="text" name="job_title">
+                </div>
+                <div class="job-img">
+                    <span>Job content image:</span>
+                    <input type="file" name="job_img" accept=".jpeg,.png,.jpg">
+                </div>
+                <div class="job-start">
+                    <span>Job starts on:</span>
+                    <input type="datetime-local" name="job_start">
+                </div>
+                <div class="job-description">
+                    <span>Job description:</span><br>
+                    <textarea rows="6" cols="47" name="job_description"></textarea>
+                </div>
+                <div class="post">
+                    <button type="button">Update</button>
+                </div>
+            </form>
+        </div>
+    
+        <!--Update personal profile-->
+        <div id="update-personal-page" class="page off">
+            <form id="update-personal">
+                <h1>Update profile</h1>
+                <div class="personal_img">
+                    <div class="upload_img">
+                         <input type="file" name="img" accept=".jpeg,.png,.jpg">
+                    </div>      
+                </div>
+                <div class="email">
+                    <span>E-mail:</span>
+                    <input type="text" name="email">
+                </div>
+                <div class="username">
+                    <span>Name:</span>
+                    <input type="text" name="username">
+                </div>
+                <div class="password">
+                    <span>Password:</span>
+                    <input type="text" name="password">
+                </div>
+                <div class="update">
+                    <button type="button">Update</button>
+                </div>
+            </form>
+        </div>
+    
+    </main>
+
+    <!--Popup-->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <footer>
+        <p>&copy; lurkforwork.com 2022</p>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="module" src="src/main.js"></script>
+    
+</body>
+</html>
