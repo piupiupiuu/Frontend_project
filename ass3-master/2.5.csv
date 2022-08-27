@@ -1,0 +1,16 @@
+﻿name,mygame,
+thumbnail,"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",
+question,how are you,hi
+timelimit,4,3
+attachmentType,none,none
+attachmentImg,none,none
+attachmentVideo,none,none
+questionType,single,multiple
+point,5,4
+correctAnswer,"0,1","0,2"
+answer1,a,x
+answer2,b,
+answer3,c,y
+answer4,d,z
+answer5,e,
+answer6,f,
